@@ -1,8 +1,10 @@
 import React from 'react'
 import AppNavbar from '../components/AppNavbar'
 import { Helmet } from 'react-helmet'
+import { useTranslation } from 'react-i18next';
 
 export default function About() {
+    const { t } = useTranslation()
     return (
         <div>
             <Helmet>
@@ -10,7 +12,7 @@ export default function About() {
                 <meta name='description' content='React Starter' />
             </Helmet>
             <AppNavbar />
-            About
+            {t('about')}
         </div>
     )
 }
